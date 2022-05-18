@@ -17,6 +17,18 @@ Please execute the Get-Help command in a Powershell console to see the how to us
 Get-Help ./fetch-azure-function-local-settings.ps1
 ```
 
+A quick example of how to use it would be:
+```powershell
+# If you are using keyvault and a specific slot
+./fetch-azure-function-local-settings.ps1 -appName MyFunctionApp -resourceGroup AppResourceGroup -keyVaultName MyKeyvault -slotName SampleSlotName
+
+# If you are using keyvault
+./fetch-azure-function-local-settings.ps1 -appName MyFunctionApp -resourceGroup AppResourceGroup -keyVaultName MyKeyvault
+
+# Only appName and resourceGroup parameters are mandatory, keyvault or slot are needed in case you need them.
+./fetch-azure-function-local-settings.ps1 -appName MyFunctionApp -resourceGroup AppResourceGroup
+```
+
 # How does it work?
 
 It just executes az CLI commands.
