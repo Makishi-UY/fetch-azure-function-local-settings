@@ -1,6 +1,6 @@
 # fetch-azure-function-local-settings
 
-Gets the configuration settings of an azure function application, maps them with the local.settings.json format and resolves the keyvault values.
+Gets the configuration settings of an azure function application or its slots, maps them with the local.settings.json format and resolves the keyvault values.
 
 For now, it only works with Application Settings, so it won´t parse Connection Strings.
 
